@@ -39,11 +39,11 @@ public class CafeUtil {
         }
 
         // #4 Display Menu
-    public void displayMenu(ArrayList<String> menuItems) {
+//    public void displayMenu(ArrayList<String> menuItems) {
 
-        for (int id = 0; id < menuItems.size(); id++) {
-            System.out.printf("%s %s \n", id, menuItems.get(id));
-        }
-    }
+//        for (int id = 0; id < menuItems.size(); id++) {
+//            System.out.printf("%s %s \n", id, menuItems.get(id));
+//        }
+//    }
 
 }
