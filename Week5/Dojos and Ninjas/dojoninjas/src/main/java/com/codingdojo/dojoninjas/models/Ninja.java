@@ -11,15 +11,18 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 @Table(name="ninjas")
 public class Ninja {
  @Id
  @GeneratedValue(strategy = GenerationType.IDENTITY)
- // Chart/sql Variables
+ // Table Variables here
  private Long id;
+ @NotBlank
  private String firstName;
+ @NotBlank
  private String lastName;
  private int age;
  @Column(updatable=false)
@@ -31,9 +34,6 @@ public class Ninja {
  @JoinColumn(name="dojo_id")
  private Dojo dojo;
  
- public Ninja() {
-     
- }
  
  
 
@@ -102,6 +102,10 @@ public Dojo getDojo() {
 
 public void setDojo(Dojo dojo) {
 	this.dojo = dojo;
+}
+
+public Ninja() {
+    
 }
 
 }
